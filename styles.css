@@ -1,16 +1,21 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 .cover {
-margin: 0;
-    /* 배경 이미지를 바닥에 깔기 (파일 이름 확인!) */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('27.png');
-    background-size: cover;
+    width: 100%!important;      
+    height: 100vh!important;    
+    margin: 0!important;
+    padding: 0!important;
+    box-sizing: border-box!important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('27.png');
+    background-size: cover !important;
     background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;             /* 1. 자식들을 자유롭게 배치하겠다! */
-    justify-content: center;   /* 2. 가로 가운데로 모아라! */
+    overflow: hidden !important;
+    display: flex;
+    position: fixed;             
+    justify-content: center;   
     align-items: center;
+    top: 0;
+    left: 0;
 }
 
 .input-group {
