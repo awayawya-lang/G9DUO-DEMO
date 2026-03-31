@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G9DUO(demo)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+<body>
+    <div class="cover">
+    <div class="login-container">
+        <div class="input-group">
+            <div class="input-group2">
+                <div class="input-group3">
+                        <img src="G9DUO.svg"style="width: 12.81rem; height: 2.66rem; aspect-ratio: 82/17; display: block; padding-bottom: 2.34rem;" alt="로고"> 
+                    </div>
+                <div class="input-group4">
+                    <input type="text" placeholder="아이디(이메일)" id="userId" class="input-group5">
+                    <input type="text" placeholder="비밀번호" id="userPw" class="input-group5">
+                </div>
+            <div class="input-group6">
+                <div class="input-group7">
+                  <div class="input-group9">
+                    <img src="checkbox.svg" onclick="this.src = this.src.includes('on') ? 'checkbox.svg' : 'checkbox-on.svg'"><p class="p1">자동로그인</p>
+                  </div>
+
+                  <div class="input-group8">
+                    <p class="p1">아이디·비밀번호 찾기</p><img src="Subtract.svg"style="width: 0.6rem; height: 1rem;" alt="화살표">
+                   </div>
+                </div>
+
+
+            </div>     
+
+               
+        
+        </div>    
+    
+        <div class="input-group10">
+            <div class="button1"id="loginBtn">
+                <div class="button1-text">로그인</div>
+            </div>
+            <div class="box"></div>
+            <div class="button2">
+                <div class="button2-text">회원가입</div>
+    </div>
+    </div>
+    
+<script>
+    const idInput = document.getElementById('userId'); // 아까 입력창에 id="userId" 주셨죠?
+    const pwInput = document.getElementById('userPw'); // 입력창에 id="userPw" 주셨죠?
+    const loginBtn = document.getElementById('loginBtn');
+
+    // 2. 체크하는 함수 만들기
+    function checkInputs() {
+        // 아이디와 비밀번호 둘 다 글자가 있을 때!
+        if (idInput.value.trim().length > 0 && pwInput.value.trim().length > 0) {
+            loginBtn.classList.add('active'); // active 클래스 켜기
+        } else {
+            loginBtn.classList.remove('active'); // active 클래스 끄기
+        }
+    }
+
+    // 3. 글자 쓸 때마다 감시하기
+    idInput.addEventListener('input', checkInputs);
+    pwInput.addEventListener('input', checkInputs);
+</script>
+
+</body>
+</html>
